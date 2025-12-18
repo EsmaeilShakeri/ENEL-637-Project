@@ -1,4 +1,4 @@
-# ENEL-637-Project
+# ENEL 637-Project
 # Residue Number Systems for Matrix Multiplication
 
 This project investigates **Residue Number Systems (RNS)** for accelerating large-scale **matrix multiplication (MM)**.  
