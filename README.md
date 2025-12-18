@@ -1,45 +1,42 @@
 # ENEL-637-Project
-# Residue Number Systems for Matrix Multiplications
+# Residue Number Systems for Matrix Multiplication
 
-This repository contains the code and report for my ENEL 637 course project at the University of Calgary.  
-The project explores how **Residue Number Systems (RNS)** can be used to implement matrix multiplication with
-improved parallelism and reduced carry-propagation compared to standard binary arithmetic.
+This project investigates **Residue Number Systems (RNS)** for accelerating large-scale **matrix multiplication (MM)**.  
+RNS enables **carry-free modular arithmetic** and parallel execution across residue channels, but introduces a conversion bottleneck due to **WNS ↔ RNS** encoding/decoding (notably CRT-based reconstruction). The goal is to quantify when the parallel MM gains outweigh conversion overhead for large matrix sizes.
 
----
-
-## Project Overview
-
-The main goals of this project are to:
-
-- Implement matrix multiplication in an RNS framework.
-- Compare RNS-based multiplication against conventional (binary) matrix multiplication in terms of:
-  - Numerical correctness
-  - Execution time / scalability
-  - Dynamic range and overflow behaviour
-- Illustrate the complete pipeline:
-  1. Mapping integers to RNS representation  
-  2. Element-wise operations in parallel residue channels  
-  3. Reconstruction via the Chinese Remainder Theorem (CRT)  
-  4. Matrix-level evaluation and error analysis
-
-The repository includes both the **Python implementation** and the **project report** in PDF format.
+**Course:** ENEL 637 (Fall 2025)  
+**Instructor:** Prof. Dimitrov  
+**Author:** Esmaeil Shakeri  
+**Report date:** December 18, 2025
 
 ---
 
-## Repository Structure
+## Project Summary
 
-```text
-ENEL-637-Project/
-├── src/
-│   ├── rns.py               # Core RNS representation and conversion utilities
-│   ├── rns_matrix_ops.py    # RNS-based matrix multiplication functions
-│   ├── baseline_matrix_ops.py  # Standard (binary) matrix multiplication for comparison
-│   └── experiments.py       # Scripts to run experiments and generate figures
-├── notebooks/
-│   └── demo_rns_multiplication.ipynb   # Example Jupyter notebook (optional)
-├── report/
-│   └── ENEL637_RNS_MatrixMultiplications_Report.pdf
-├── tests/
-│   └── test_rns_correctness.py        # Basic unit tests (optional)
-├── README.md
-└── requirements.txt
+- Uses **k = 4** parallel residue channels with moduli set **M = {127, 128, 129, 257}**.
+- Models total RNS runtime as:
+  \[
+  T_{RNS} = T_{Encode} + T_{Core} + T_{Decode}.
+  \]
+- Demonstrates a **crossover point near N ≈ 350**, where RNS becomes faster than the baseline WNS implementation in the simulated timing model.
+
+---
+
+## What’s Included in This Repository
+
+You can find the following materials in this repo:
+
+- **Code**: Python simulation for WNS MM vs RNS MM timing (encode/core/decode)
+- **Dataset**: CSV file containing raw timing results (used to generate the table/plots)
+  - Example file name used in the report: `rns_data.csv`
+- **Figures**: Plots used in the report (speedup curve and component-time analysis)
+- **Report**: Final PDF/LaTeX source for the write-up
+
+---
+
+## Setup Instructions
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/EsmaeilShakeri/ENEL-637-Project.git
+cd ENEL-637-Project
