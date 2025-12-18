@@ -1,5 +1,5 @@
 # ENEL-637-Project
-# Residue Number Systems for Matrix Multiplication (ENEL 637)
+# Residue Number Systems for Matrix Multiplication
 
 This project investigates **Residue Number Systems (RNS)** for accelerating large-scale **matrix multiplication (MM)**.  
 RNS enables **carry-free modular arithmetic** and parallel execution across residue channels, but it introduces a conversion bottleneck due to **WNS ↔ RNS** encoding/decoding (notably CRT-style reconstruction). The goal of this repository is to provide the **simulation code**, **generated dataset**, and **figures** for the experiment.
