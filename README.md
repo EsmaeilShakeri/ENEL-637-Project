@@ -2,6 +2,7 @@
 # Residue Number Systems for Matrix Multiplication
 
 **Author:** Esmaeil Shakeri  
+**Course Instructor:** Dr. Dimitrov 
 **Date:** December 19, 2025  
 
 This project investigates **Residue Number Systems (RNS)** for accelerating large-scale **matrix multiplication (MM)**.  
