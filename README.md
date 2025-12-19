@@ -39,5 +39,5 @@ A brief section listing the abbreviations and their descriptions is included in 
 
 ### Run the Repository
 ```bash
-# Open the notebooks in the GitHub repository `notebooks/` directory to execute the project workflow and reproduce the analysis and figures.
+# Open the notebook in the GitHub repository to execute the project workflow and reproduce the analysis and figures.
 
