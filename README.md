@@ -42,6 +42,8 @@ A brief section listing the abbreviations and their descriptions is included in 
 git clone https://github.com/EsmaeilShakeri/ENEL-637-Project.git
 cd ENEL-637-Project
 
+### Step 2: Run the Repository
+```bash
+# Run the main Python script (replace with your actual file name)
+python main.py
 
-### **Step 2: Run the Repository**
-Open the notebooks in the notebooks/ directory to run each part of the project and reproduce the analysis and figures.
