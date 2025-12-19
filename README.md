@@ -39,5 +39,5 @@ A brief section listing the abbreviations and their descriptions is included in 
 
 ### Run the Repository
 ```bash
-# Run the main Python script (replace with your actual file name)
-python main.py
+# Open the notebooks in the GitHub repository `notebooks/` directory to execute the project workflow and reproduce the analysis and figures.
+
