@@ -42,5 +42,6 @@ A brief section listing the abbreviations and their descriptions is included in 
 git clone https://github.com/EsmaeilShakeri/ENEL-637-Project.git
 cd ENEL-637-Project
 
-### Step 1: Clone the Repository
+
+### **Step 2: Run the Repository**
 Open the notebooks in the notebooks/ directory to run each part of the project and reproduce the analysis and figures.
