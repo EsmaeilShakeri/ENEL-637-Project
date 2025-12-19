@@ -37,13 +37,7 @@ A brief section listing the abbreviations and their descriptions is included in 
 
 ## Setup Instructions
 
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/EsmaeilShakeri/ENEL-637-Project.git
-cd ENEL-637-Project
-
-### Step 2: Run the Repository
+### Run the Repository
 ```bash
 # Run the main Python script (replace with your actual file name)
 python main.py
-
